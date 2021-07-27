@@ -3,8 +3,10 @@
 namespace Trin4ik\LaravelExpoPush;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Notification;
+use Trin4ik\LaravelExpoPush\Channels\ExpoPushChannel;
 
-class LaravelExpoPushServiceProvider extends ServiceProvider
+class ExpoPushServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -19,9 +21,17 @@ class LaravelExpoPushServiceProvider extends ServiceProvider
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
+        $this->publishes([
+            __DIR__.'/../database/migrations/create_expo_push_notifications_table.php' => database_path("/migrations/" . date('Y_m_d_His') . "_create_expo_push_notifications_table.php"),
+        ], 'migrations');
+
+        Notification::extend('expo-push', function ($app) {
+            return new ExpoPushChannel();
+        });
+
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-expo-push.php'),
+                __DIR__.'/../config/expo-push.php' => config_path('expo-push.php'),
             ], 'config');
 
             // Publishing the views.
@@ -50,11 +60,6 @@ class LaravelExpoPushServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-expo-push');
-
-        // Register the main class to use with the facade
-        $this->app->singleton('laravel-expo-push', function () {
-            return new LaravelExpoPush;
-        });
+        $this->mergeConfigFrom(__DIR__.'/../config/expo-push.php', 'expo-push');
     }
 }

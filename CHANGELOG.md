@@ -2,6 +2,6 @@
 
 All notable changes to `laravel-expo-push` will be documented in this file
 
-## 1.0.0 - 201X-XX-XX
+## 0.0.1 - 2021-07-27
 
-- initial release
+- pre release
