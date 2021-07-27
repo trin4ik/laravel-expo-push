@@ -1,16 +1,16 @@
 {
     "name": "trin4ik/laravel-expo-push",
     "description": "Laravel Expo Push Notification",
+    "license": "MIT",
     "keywords": [
         "trin4ik",
         "laravel-expo-push"
     ],
     "homepage": "https://github.com/trin4ik/laravel-expo-push",
-    "license": "MIT",
-    "type": "library",
+
     "authors": [
         {
-            "name": "trinux zotoff",
+            "name": "trin4ik",
             "email": "trin4ik@gmail.com",
             "role": "Developer"
         }
@@ -24,9 +24,6 @@
         "psr-4": {
             "Trin4ik\\LaravelExpoPush\\": "src"
         }
-    },
-    "config": {
-        "sort-packages": true
     },
     "extra": {
         "laravel": {
