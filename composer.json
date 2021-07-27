@@ -1,0 +1,54 @@
+{
+    "name": "trin4ik/laravel-expo-push",
+    "description": "Laravel Expo Push Notification",
+    "keywords": [
+        "trin4ik",
+        "laravel-expo-push"
+    ],
+    "homepage": "https://github.com/trin4ik/laravel-expo-push",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "trinux zotoff",
+            "email": "trin4ik@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trin4ik\\LaravelExpoPush\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trin4ik\\LaravelExpoPush\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Trin4ik\\LaravelExpoPush\\LaravelExpoPushServiceProvider"
+            ],
+            "aliases": {
+                "LaravelExpoPush": "Trin4ik\\LaravelExpoPush\\LaravelExpoPushFacade"
+            }
+        }
+    }
+}
