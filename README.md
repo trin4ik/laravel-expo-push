@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/trin4ik/laravel-expo-push.svg?style=flat-square)](https://packagist.org/packages/trin4ik/laravel-expo-push)
 [![Total Downloads](https://img.shields.io/packagist/dt/trin4ik/laravel-expo-push.svg?style=flat-square)](https://packagist.org/packages/trin4ik/laravel-expo-push)
-![GitHub Actions](https://github.com/trin4ik/laravel-expo-push/actions/workflows/main.yml/badge.svg)
 
 Simple and stupid package for send push notification with [expo-notification](https://docs.expo.io/versions/latest/sdk/notifications/) [service](https://docs.expo.io/push-notifications/sending-notifications/). \
 No tests, no mans, no routes/controllers for get tokens from clients etc. Only channel. \
