@@ -7,7 +7,6 @@
         "laravel-expo-push"
     ],
     "homepage": "https://github.com/trin4ik/laravel-expo-push",
-
     "authors": [
         {
             "name": "trin4ik",
@@ -18,9 +17,6 @@
     "require": {
         "php": "^7.4|^8.0",
         "laravel/framework": "^8.0"
-    },
-    "config": {
-        "sort-packages": true
     },
     "autoload": {
         "psr-4": {

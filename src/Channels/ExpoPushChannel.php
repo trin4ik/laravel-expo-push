@@ -33,7 +33,7 @@ class ExpoPushChannel
         $data['to'] = $expo_token;
 
         $item = [
-            'type' => $notifiable::class,
+            'type' => get_class($notifiable),
             'id' => $notifiable->getKey()
         ];
 

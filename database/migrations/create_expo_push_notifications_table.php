@@ -17,8 +17,8 @@ class CreateExpoPushNotificationsTable extends Migration
             $table->string('item_id')->nullable();
             $table->text('payload')->nullable();
             $table->text('response')->nullable();
-            $table->unsignedSmallInteger('code')->default(0);
-            $table->char('status', 50)->nullable();
+            $table->unsignedSmallInteger('code')->default(0)->index();
+            $table->char('status', 50)->nullable()->index();
             $table->timestamps();
         });
     }
