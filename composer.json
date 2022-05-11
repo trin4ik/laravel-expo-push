@@ -1,33 +1,33 @@
 {
-    "name": "trin4ik/laravel-expo-push",
-    "description": "Laravel Expo Push Notification",
-    "license": "MIT",
-    "keywords": [
-        "trin4ik",
-        "laravel-expo-push"
-    ],
-    "homepage": "https://github.com/trin4ik/laravel-expo-push",
-    "authors": [
-        {
-            "name": "trin4ik",
-            "email": "trin4ik@gmail.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^7.4|^8.0",
-        "laravel/framework": "^8.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Trin4ik\\LaravelExpoPush\\": "src"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Trin4ik\\LaravelExpoPush\\ExpoPushServiceProvider"
-            ]
-        }
+  "name": "trin4ik/laravel-expo-push",
+  "description": "Laravel Expo Push Notification",
+  "license": "MIT",
+  "keywords": [
+    "trin4ik",
+    "laravel-expo-push"
+  ],
+  "homepage": "https://github.com/trin4ik/laravel-expo-push",
+  "authors": [
+    {
+      "name": "trin4ik",
+      "email": "trin4ik@gmail.com",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "laravel/framework": ">=8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Trin4ik\\LaravelExpoPush\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Trin4ik\\LaravelExpoPush\\ExpoPushServiceProvider"
+      ]
+    }
+  }
 }
